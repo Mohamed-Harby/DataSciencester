@@ -30,7 +30,7 @@ def number_of_friends(user):
 
 
 def total_connections():
-    return sum(number_of_friends(user) for user in friendships)
+    return sum(number_of_friends(user) for user in users)
 
 
 def average_connections():
@@ -57,5 +57,8 @@ print_by_number_of_friends()
 
 # Output
 # [(1, 3), (2, 3), (3, 3), (5, 3), (8, 3), (0, 2), (4, 2), (6, 2), (7, 2), (9, 1)]
-
 # This result doesn't mean the user with id = "1" is the most centralized user in our network
+
+print(average_connections())
+# Output
+# 2.4
