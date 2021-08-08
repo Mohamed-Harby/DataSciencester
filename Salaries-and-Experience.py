@@ -1,5 +1,8 @@
 from collections import defaultdict
 
+# predicts average salary for each tenture bucket
+# ---simple linear regression
+
 salaries_and_tenures = [(83000, 8.7), (88000, 8.1),
                         (48000, 0.7), (76000, 6),
                         (69000, 6.5), (76000, 7.5),
@@ -41,3 +44,17 @@ print(average_salary_by_bucket)
 
 # output
 # {'more than five': 79166.66666666667, 'less than two': 48000.0, 'less than five': 61500.0}
+
+
+
+# predicts which users use paid accounts
+# ---simple logistic regression
+def predict_paid_or_unpaid(years_experience):
+  if years_experience < 3.0:
+    return "paid"
+  elif years_experience < 8.5:
+    return "unpaid"
+  else:
+    return "paid"
+  
+  
